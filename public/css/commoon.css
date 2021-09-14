@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'icomoon';
-    src: url('../fonts/icomoon.eot?tomleg');
-    src: url('../fonts/icomoon.eot?tomleg#iefix') format('embedded-opentype'),
-        url('../fonts/icomoon.ttf?tomleg') format('truetype'),
-        url('../fonts/icomoon.woff?tomleg') format('woff'),
-        url('../fonts/icomoon.svg?tomleg#icomoon') format('svg');
+    src: url('/public/fonts/icomoon.eot?tomleg');
+    src: url('/public/fonts/icomoon.eot?tomleg#iefix') format('embedded-opentype'),
+        url('/public/fonts/icomoon.ttf?tomleg') format('truetype'),
+        url('/public/fonts/icomoon.woff?tomleg') format('woff'),
+        url('/public/fonts/icomoon.svg?tomleg#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -57,7 +57,7 @@
     content: '';
     width: 40px;
     height: 40px;
-    background: url(../images/opensea.svg) no-repeat;
+    background: url(/public/images/opensea.svg) no-repeat;
     background-size: 40px 40px;
 
 
@@ -161,14 +161,14 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background:url(../images/unnamed.jpg) no-repeat;
+    background:url(/public/images/unnamed.jpg) no-repeat;
     background-size:100% auto;
     opacity: .2;
     filter: blur(8px);
 
     
 }
-.banner div {
+.banner-img, .banner-text {
     
     flex: 1;
 }
@@ -225,7 +225,7 @@
   
     background-color:#fff;
 }
-.banner-img{
+.banner-img img{
     text-align: center;
    
     
@@ -251,13 +251,38 @@
 
 }
 .banner .works_introduce {
+    display: flex;
+    flex-direction: row;
     background:#fff;
-    height: 50px;
+    height: 70px;
+    font-size:14px;
+    padding:16px;
+}
+.banner .works_introduce h3 {
+    font-weight: 600;
+    color: rgb(4, 17, 29);
+}
+
+.banner .works_introduce img {
+    width:40px;
+    height: 40px;
+}
+.banner .works_introduce .suibian2 {
+    height: 100%;
+    flex:1;
+}
+.banner .suibian {
+    width: 40px!important;
+    height: 40px!important;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 20px;
 }
 .banner .introduce{
    
     pointer-events: auto;
     color:rgb(32, 129, 226) ;
+
 
 }
 .banner .introduce:hover {
