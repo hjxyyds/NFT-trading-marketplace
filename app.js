@@ -12,7 +12,7 @@ app.use('/upload/', express.static('./upload/'))
 
 // 加载express模板引擎
 app.engine('html', require('express-art-template'))
-
+//app.use('/public/script', express.static('./public/script'))
 // 配置body-parser模板
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

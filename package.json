@@ -1,5 +1,12 @@
 {
+  "name": "nft_world",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "./app.js"
+  },
+  "author": "yourDad",
   "dependencies": {
+    "@metamask/onboarding": "^1.0.1",
     "art-template": "^4.13.2",
     "blueimp-md5": "^2.18.0",
     "body-parser": "^1.19.0",
