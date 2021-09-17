@@ -7,6 +7,7 @@ var router = express.Router()
 router.get('/', function (req, res) {
     res.render('index.html')
 })
+
 router.post('/upload', multer({ dest: 'upload' }).single('file'), (req, res) => {
     console.log(req.file)
     fs.renameSync(req.file.path, 'upload/' + req.file.originalname)
