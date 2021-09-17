@@ -1,6 +1,6 @@
-
 var express = require('express')
 var router = require('./router')
+// import {router}  from './router.js'
 var bodyParser = require('body-parser')
 var session = require('express-session')//记录保持登录信息
 var app = express()
@@ -9,11 +9,10 @@ var app = express()
 app.use('/public/', express.static('./public/'))
 app.use('/node_modules/', express.static('./node_modules/'))
 app.use('/upload/', express.static('./upload/'))
-app.use('/views/', express.static('./views/'))
 
 // 加载express模板引擎
 app.engine('html', require('express-art-template'))
-//app.use('/public/script', express.static('./public/script'))
+
 // 配置body-parser模板
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
