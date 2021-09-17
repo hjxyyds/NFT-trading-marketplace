@@ -15,6 +15,7 @@
 .shortcut {
   
     display: flex;
+    z-index: 1;
     position: fixed;
     background:#fff;
     width: 100%;
