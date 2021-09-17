@@ -30,6 +30,7 @@
 .logo {
     width: 200px;
     margin-right: 8%;
+    height:72px;
 
 }
 
@@ -39,6 +40,8 @@
     width: 100%;
     font-size: 20px;
     font-weight: 500;
+    height:72px;
+    line-height: 72px;
     padding-left: 60px;
     color: #04111DBF;
 
@@ -170,155 +173,4 @@
     border-bottom: 1px solid blue;
 }
 
-/* 展示区 */
-.banner {
-    pointer-events: none;
-    position: relative;
-    height: 600px;
-    display: flex;
-    font-size: 16px;
-    font-weight: 600;
-    padding-left: 10px;
-   
-    
-}
-.banner-bg {
-    position: absolute;
-    z-index: -2;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background:url(/public/images/unnamed.jpg) no-repeat;
-    background-size:100% auto;
-    opacity: .2;
-    filter: blur(8px);
 
-    
-}
-.banner-img, .banner-text {
-    
-    flex: 1;
-}
-.banner-text{
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.banner .banner-text h1 {
-
-    margin-top: 180px;
-    font-size: 45px;
-    color: rgb(4, 17, 29);
-   
-
-}
-.banner .banner-text h2 {
-    font-size: 24px;
-    font-weight: 400;
-
-}
-.banner-text li {
-    float: left;
-    margin-right: 50px;
-    pointer-events: auto;
-    
-   
-}
-.banner-text li:hover {
-    box-shadow: 1px 1px 12px 1px rgba(0, 0, 0, .3);
-}
-.banner-text li:nth-of-type(1) a ,.banner-text li:nth-of-type(2) a {
-    display: block;
-    width: 167px;
-    height: 49.6px;
-    line-height: 49.6px;
-    border: 1px solid rgb(32, 129, 226);
-    text-align: center;
-    color: rgb(255, 255, 255);
-    border-radius: 5px;
-    background-color:rgb(32, 129, 226);
-}
-.banner-text li:nth-of-type(1) a  {
-   
-   
-    color: rgb(255, 255, 255);
-
-    background-color:rgb(32, 129, 226);
-}
-.banner-text li:nth-of-type(2) a {
-
-    color:rgb(32, 129, 226) ;
-  
-    background-color:#fff;
-}
-.banner-img img{
-    text-align: center;
-   
-    
-}
-.banner-img .banner-works {
-    pointer-events: auto;
-    margin-top: 100px;
-    width: 550px;
-    border-radius: 8px;
-    margin-left:  auto;
-    margin-right: auto;
-    overflow: hidden;
-    transition: all 0.5s  ;
-}
-.banner-works:hover{
-    box-shadow: 1px 1px 12px 1px rgba(0, 0, 0, .3);
-    transform: translateY(-10px);
-}
-.banner-img img {
-  
-    width: 550px;
-    height: 429px;
-
-}
-.banner .works_introduce {
-    display: flex;
-    flex-direction: row;
-    background:#fff;
-    height: 70px;
-    font-size:14px;
-    padding:16px;
-}
- .banner-works{
-     position: absolute;
-     z-index: -1;
- }
-
-.banner .works_introduce h3 {
-    font-weight: 600;
-    color: rgb(4, 17, 29);
-}
-
-.banner .works_introduce img {
-    width:40px;
-    height: 40px;
-}
-.banner .works_introduce .suibian2 {
-    height: 100%;
-    flex:1;
-}
-.banner .suibian {
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    overflow: hidden;
-    margin-right: 20px;
-}
-.banner .introduce{
-   
-    pointer-events: auto;
-    color:rgb(32, 129, 226) ;
-
-
-}
-.banner .introduce:hover {
-    color: rgb(24, 104, 183)
-
-}
