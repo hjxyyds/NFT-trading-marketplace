@@ -15,8 +15,10 @@ article {
     
     position: relative;
     top: 90px;
-    padding-left:300px;
-    padding-right: 300px; 
+    padding-left:270px;
+    padding-right: 270px; 
+    background: #fff;
+    
     
 }
 article h3 {
@@ -47,7 +49,7 @@ article h4 {
     
 }
 .item-flie {
-      opacity: 0; 
+    opacity: 0; 
      width: 100%;
      height: 250px;
     
@@ -55,7 +57,7 @@ article h4 {
 .tips {
     position:  absolute;
     top: 90px;
-    left: 100px;
+    left: 35%;
     text-align: center;
 
 }
@@ -69,12 +71,13 @@ article h4 {
     width: 100%;
     line-height: 3;
     border-radius: 8px;
+    border:1px solid #ccc;
     
 }
-.name input:hover,.link input:hover{
+ /* .name input:hover,.link input:hover{
     box-shadow: 0 0 12px rgba(0,0,0,.3);
 
-}
+ }  */
 .link {
     margin-bottom: 50px;
 }
@@ -93,31 +96,45 @@ textarea{
 .detail {
     margin-bottom: 50px;
 }
-textarea:hover{
+/* textarea:hover{
     box-shadow: 0 0 12px  2px rgba(0,0,0,.3);
 
-}
+} */
 
-.choose .BlockChain {
-    border: 1PX solid #ccc;
-    height: 48px;
-    line-height: 48px;
-    overflow: hidden;
-    padding-left: 12px;
-}
 .choose {
+    /* position: relative; */
+    height: 100px;
+    /* overflow: hidden; */
+    background-color: #fff;
     margin-bottom: 50px;
 }
-.choose .BlockChain:hover {
-    box-shadow: 0 1px 12px  1px rgba(0,0,0,.3);
-    height: 96px;
-    overflow: visible;
-     
-    
+.BlockChain{
+    position: relative;
+    width:100%;
+    height:48px;
+    overflow:hidden;
     
 }
+/* .choose .BlockChain:hover {
+    box-shadow: 0 1px 12px  1px rgba(0,0,0,.3);
+    height: 96px;
+    overflow: visible;  
+    
+} */
 .Ethereum img ,.polygon img{
     border-radius: 16px;
+}
+.Ethereum,.polygon{
+    position:absolute;
+    border: 1pX solid #ccc;
+    height:100%;
+    width:100%;
+    padding-left:15px;
+    line-height: 48px;
+    cursor:pointer;
+}
+.polygon{
+    top:100%;
 }
 .choose span {
     float:right;
@@ -129,5 +146,7 @@ textarea:hover{
 .polygon img {
     max-width: 32px;
     max-height: 32px;
-
+}
+.shadow{
+    box-shadow: 0 1px 8px  1px rgba(0,0,0,.3)!important;
 }
