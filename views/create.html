@@ -13,11 +13,13 @@
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
     <!-- <link rel="stylesheet" href="/node_modules/Boostrap/bootstrap-3.4.1-dist/css/bootstrap.min.css"> -->
+    <link rel="shortcut icon" href="/public/images/favicon.ico" />
     <link rel="stylesheet" href="/public/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/public/css/base.css">
     <link rel="stylesheet" href="/public/css/commoon.css">
     <link rel="stylesheet" href="/public/css/create.css">
     <script src="/public/lib-flexible-2.0/index.js"></script>
+
 
 </head>
 
@@ -36,7 +38,9 @@
                 <li>
                     <input type="search" placeholder="查找" name="search" autofocus="autofocus">
                 </li>
-                <li><a href="#">创作</a></li>
+                <li>
+                    <a href="#">创作</a>
+                </li>
                 <li><a href="#">上传</a></li>
                 <li><a href="#">买</a></li>
                 <li><a href="#">卖</a></li>
@@ -65,6 +69,7 @@
             </header>
             <input class="input0" type="text" required="required" placeholder="作品名称"
                 style="border:1px solid #ccc ;padding-left:5px">
+            <p>X &nbsp;此项是必填项</p>
         </section>
         <section class="link">
             <header>
@@ -74,7 +79,7 @@
                 </p>
             </header>
 
-            <input class="input1" type="url" required="required" placeholder="https://yoursite.io/item/123"
+            <input class="input2" type="url" placeholder="https://yoursite.io/item/123"
                 style="border:1px solid #ccc ;padding-left:5px">
 
 
@@ -96,23 +101,114 @@
                     <img src="/public/images/ethereum.png" alt="">
                     &nbsp;&nbsp;
                     Ethereum
-                    <span class="glyphicon glyphicon-chevron-down"></span>
+
                 </div>
                 <div class="polygon">
                     <img src="/public/images/polygon.svg" alt="">
                     &nbsp;&nbsp;
                     polygon
-                    <span class="glyphicon glyphicon-chevron-down"></span>
                 </div>
+
+                <span class="glyphicon glyphicon-chevron-down"></span>
             </div>
+
         </section>
         <button type="button" class="btn btn-primary">创作</button>
 
 
 
     </article>
-    <script src="/public/script/document1.js"></script>
-    <script src="/public/script/document.js"></script>
+    <script>
+        var textarea = document.querySelector("textarea");
+        fn1(textarea);
+        fn2(textarea, textarea.innerHTML);
+        var input2 = document.querySelector(".input2");
+        fn1(input2);
+        fn2(input2, input2.innerHTML)
+        var input0 = document.querySelector(".input0");
+        fn1(input0);
+        var p = document.querySelector('.name').querySelector('p');
+        input0.onfocus = function () {
+            this.value = ' ';
+        }
+        input0.onblur = function () {
+            if (this.value == ' ') {
+                this.style.border = '1px solid red';
+                p.style.display = 'block';
+                p.style.color = 'red';
+
+            }
+            else {
+                this.style.border = '1px solid #ccc';
+
+
+                p.style.display = 'none';
+
+                return;
+            }
+
+
+        }
+        function fn1(obj) {
+            document.addEventListener("click", function (e) {
+                if (e.target == obj) {
+                    obj.className = "shadow";
+                } else {
+                    obj.className = "";
+                }
+            })
+        }
+        function fn2(obj, string) {
+            obj.onfocus = function () {
+                this.value = ' ';
+            }
+            obj.onblur = function () {
+                if (this.value == ' ') {
+                    this.value = string;
+                }
+                else {
+                    return;
+                }
+
+            }
+
+        }
+        var item = document.querySelector('.BlockChain');
+        var flag = 0;
+        var items = item.querySelectorAll('div');
+
+
+        item.onclick = function () {
+            if (flag == 0) {
+
+                this.style.overflow = 'visible';
+                flag = 1;
+            }
+            else {
+
+                this.style.overflow = 'hidden';
+                flag = 0;
+            }
+
+        }
+        for (var i = 0; i < items.length; i++) {
+            items[i].setAttribute('index', i);
+            items[i].onclick = function () {
+                var index = this.getAttribute('index');
+                var divs = items[index].innerHTML;
+                for (var j = index; j > 0; j--) {
+                    items[j].innerHTML = items[j - 1].innerHTML;
+                }
+                items[0].innerHTML = divs;
+
+
+            }
+
+        }
+
+
+    </script>
+
 </body>
 
 </html>
